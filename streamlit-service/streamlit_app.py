@@ -2,8 +2,8 @@ import streamlit as st
 import requests
 from requests.exceptions import ConnectionError
 
-ip_api = "127.0.0.1"
-port_api = "500"
+ip_api = "titanic-api"
+port_api = "5000"
 
 # Заголовок приложения
 st.title("Titanic Survival Prediction")

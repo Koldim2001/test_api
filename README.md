@@ -1,11 +1,6 @@
-# test_api
-API взаимодействие с моделью
+# microservices-example
+Пример сайта на микросервисах и взаимодействие по API
 
-
-
-Запустим сервис titanic-service:
 ```
-docker build -t titanic-service:latest .   
-
-docker run -d --name titanic-service -p 500:5000 titanic-service:latest
+docker compose up -d 
 ```

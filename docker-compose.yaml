@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  titanic-api:
+    build:
+      context: .
+      dockerfile: titanic-api/Dockerfile
+    image: titanic-api:latest
+    container_name: titanic-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./titanic-api/model.pkl:/app/model.pkl
+
+  streamlit-web:
+    build:
+      context: .
+      dockerfile: streamlit-service/Dockerfile
+    image: streamlit-service:latest
+    container_name: streamlit-service
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./streamlit-service/streamlit_app.py:/app/streamlit_app.py
