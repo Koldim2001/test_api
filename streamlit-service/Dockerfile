@@ -2,12 +2,7 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    curl \
-    software-properties-common \
-    libgl1-mesa-glx \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update
 
 # Сначала копируем только requirements.txt и устанавливаем зависимости
 COPY ./streamlit-service/requirements.txt /app
